@@ -1,6 +1,3 @@
-
-
-
 # Fribbels Epic 7 Gear Optimizer
 
 This is a tool for organizing gear and optimizing gear and unit builds for Epic 7. Gearing units can be time consuming and it's not easy to find optimal combinations of gear within the game, so I made this to help make the gearing process easier.
@@ -25,7 +22,7 @@ Here's what it looks like currently:
 
 ## Requirements
 - 64-bit Windows or MacOS
-- Java 8, 64-Bit installed (Please download if you don't yet have it: https://java.com/en/download/manual.jsp. For Windows, use the 'Windows Offline (64-bit)' installer)
+- Java 8+, 64-Bit installed (Please download if you don't yet have it: https://java.com/en/download/manual.jsp. For Windows, use the 'Windows Offline (64-bit)' installer)
 
 Check out the step-by-step video guide on how to install the app: https://www.youtube.com/watch?v=bDjP5eiOfK0
 
@@ -46,34 +43,27 @@ _________________
     + [Adding bonus stats](#adding-bonus-stats)
     + [Substat modification options](#substat-modification-options)
   * [Importer tab](#importer-tab)
-    + [Creating gear data from screenshots](#creating-gear-data-from-screenshots)
-    + [Importing gear data](#importing-gear-data)
-    + [Save/Load all optimizer data](#save-load-all-optimizer-data)
-    + [Import gear from Zarroc optimizer](#import-gear-from-zarroc-optimizer)
+    + [Save or Load all optimizer data](#save-or-load-all-optimizer-data)
   * [Getting Started](#getting-started)
     + [Installing the app](#installing-the-app)
       - [Windows](#windows)
       - [Mac OS](#mac-os)
     + [Setting up the auto importer](#setting-up-the-auto-importer)
-        * [First time  setup for the automatic importer on Windows](#first-time--setup-for-the-automatic-importer-on-windows)
+        * [First time setup for the automatic importer on Windows](#first-time-setup-for-the-automatic-importer-on-windows)
         * [First time  setup for the automatic importer on Mac](#first-time--setup-for-the-automatic-importer-on-mac)
     + [Using the auto importer](#using-the-auto-importer)
-        * [Running the automatic importer from an emulator/M1 macbook](#running-the-automatic-importer-from-an-emulator-m1-macbook)
+        * [Running the automatic importer from an emulator or M1 macbook](#running-the-automatic-importer-from-an-emulator-or-m1-macbook)
         * [Running the automatic importer from a phone](#running-the-automatic-importer-from-a-phone)
-    + [Using the screenshot importer](#using-the-screenshot-importer)
-        * [First time setup for the screenshot importer on Windows](#first-time-setup-for-the-screenshot-importer-on-windows)
-        * [First time setup for the screenshot importer on Mac](#first-time-setup-for-the-screenshot-importer-on-mac)
-        * [Screenshotting gear](#screenshotting-gear)
     + [Optimizing a unit](#optimizing-a-unit)
     + [Updating your gear](#updating-your-gear)
-    + [Tips to get good optimization results:](#tips-to-get-good-optimization-results-)
-  * [TODO List](#todo-list)
+    + [Tips to get good optimization results](#tips-to-get-good-optimization-results)
   * [Troubleshooting](#troubleshooting)
     + [Automatic importer troubleshooting](#automatic-importer-troubleshooting)
     + [Optimizer troubleshooting](#optimizer-troubleshooting)
   * [Contributing to the project](#contributing-to-the-project)
+    + [Project status](#project-status)
+    + [Setup steps](#setup-steps)
   * [Contact me](#contact-me)
-
 
 ## Optimizer Tab
 
@@ -267,35 +257,11 @@ The substat selections menu allows you to drag substats from the *Don't change* 
 This tab lets you do various things with importing/exporting files.
 _________________
 
-### Creating gear data from screenshots
-
-Select the folder you have your screenshots in and the app will start reading your screenshots. Make sure the folder only contains your screenshots and nothing else. This will then output your gear.txt file, and you can export it somewhere for the next step. If there are any errors reading the screenshots, the list of failed files will be shown.
-
-### Importing gear data
-
-Once you have the gear.txt file, choose the file to import the gear into the optimizer. Most of the time you will want the **Merge** option.
-
-* **Merge data** will combine your new gear screenshots with your currently loaded gear while keeping your heroes' equipped gear and builds intact.
-* *Append data* will add the new gears to your existing gears.
-* *Overwrite data* will load in the new data, removing all previous items and heroes
-
-If you want to wipe all your data and start clean with gear screenshots, use Overwrite.
-
-If you have new screenshot files to add to a save, use the Append option.
-
-If you already have a save, and you want to update your gear, use Merge to replace old items with new items.
-
-### Save/Load all optimizer data
+### Save or Load all optimizer data
 
 Once you make changes to your items/heroes, the changes should be saved before you close the app. You can choose a file to save it to, and then later on load that file to import the data back in.
 
 The app also does autosave to an 'autosave.json' upon changes being made, and will autoload whatever was saved to the autosave file the next time the app opens.
-
-
-### Import gear from Zarroc optimizer
-
-If were a user of Zarroc's gear optimizer, this lets you import your data directly from your existing Zarroc save file. All gear, heroes, and artifacts will be imported.
-
 
 ## Getting Started
 
@@ -305,11 +271,13 @@ Please read these instructions carefully! Here is a step by step video guide to 
 
 #### Windows
 
+64 bit Java 8 or above is required:
+
 1. Install **Java 8 - 64 bit** https://java.com/en/download/manual.jsp - Get the Windows Offline (64-bit) installer
     * After installing, restart your computer (required!)
 2. On the [Releases](https://github.com/fribbels/Fribbels-Epic-7-Optimizer/releases) page, choose the latest release, and download the file that looks like ``FribbelsE7Optimizer-Setup-1.x.x.exe`` then run the installer
     * Do not download the Source Code options, those won't work
-3. Follow the steps to use either the auto importer or screenshot importer
+3. Follow the steps to use either the auto importer
 
 #### Mac OS
 
@@ -320,13 +288,13 @@ Please read these instructions carefully! Here is a step by step video guide to 
     * JRE: https://java.com/en/download/manual.jsp - Get the 64-bit offline installer
     * JDK: https://www.oracle.com/java/technologies/javase/javase8u211-later-archive-downloads.html
     * After installing, restart your computer (required!)
-  3. Follow the steps to use either the auto importer or screenshot importer
+  3. Follow the steps to use either the auto importer
 
 _________________
 
 ### Setting up the auto importer
 
-There are two importer options, one that automatically imports gear directly from your game, and one using screenshots. The automatic importer is recommended and requires these additional steps:
+The automatic importer is recommended and requires these additional steps:
 
 ##### First time setup for the automatic importer on Windows
 
@@ -337,15 +305,15 @@ Check out the step-by-step video guide to follow along with instructions: https:
 3. Restart your computer
 
 ##### First time  setup for the automatic importer on Mac
-1. Install [Python 3.4+](https://www.python.org/downloads/release/python-392/)
+1. Install [Python 3.4+](https://www.python.org/downloads/release/python-392/). This will require extra steps to set python3 as your default. Recommended to use pyenv (https://opensource.com/article/19/5/python-3-default-mac)
 2. Install [Wireshark](https://www.wireshark.org/download.html)
-3. During the Wireshark installation, also install ChmodBPF.pkg: [See image](https://i.imgur.com/FqV0BA5.png)
+4. During the Wireshark installation, also install ChmodBPF.pkg: [See image](https://i.imgur.com/FqV0BA5.png)
 3. Restart your computer
 
 ### Using the auto importer
-You can use the auto importer with an emulator, a phone, or M1 chip Macbook.
+You can use the auto importer with an emulator, a phone, or M1+ chip Macbook.
 
-##### Running the automatic importer from an emulator/M1 macbook
+##### Running the automatic importer from an emulator or M1 macbook
 
 Check out the step-by-step video guide to follow along with instructions: https://youtu.be/bDjP5eiOfK0?t=357
 
@@ -363,48 +331,6 @@ Check out the step-by-step video guide to follow along with instructions: https:
   2. On Mac, enable Internet Sharing in preferences. (May not be available for all machines depending on hardware)
 2. Connect to the mobile hotspot from your phone (The computer must be the one providing the hotspot, and the phone connects to the computer's hotspot)
 3. Follow steps 3-8 in the previous 'Running the automatic importer from an emulator' section, using your phone instead of the emulator
-
-_________________
-
-### Using the screenshot importer
-If you cannot use the automatic importer, or would prefer to use screenshots, follow the following steps to import gear by screenshotting each item.
-
-##### First time setup for the screenshot importer on Windows
-1. Install an emulator to run Epic 7 on
-    * I used LDPlayer, but others have worked as well: MeMu, Nox, etc. Bluestacks works fine with the automatic importer, but has issues with screen resolution for the screenshot importer. See a solution for getting Bluestacks screenshots working [here](https://github.com/fribbels/Fribbels-Epic-7-Optimizer/commit/94b8730e94e6323b278265ab46f6602ed7822c22#r45552268)
-2. Set the emulator's screen resolution to **1600 x 900**. [Example](https://i.imgur.com/kyUQ86a.png)
-3. Set Epic 7 to **English** and enable **High Quality Support** in settings. [Example](https://i.imgur.com/iEbfVN3.png)
-4. Install and run the optimizer
-
-##### First time setup for the screenshot importer on Mac
-
-1. Install [Bluestacks](https://www.bluestacks.com/download.html)
-    * Set the emulator's screen resolution to **1600x900** in the Preference menu
-2. Configure keyboard shortcut for Screenshot
-    * On your Mac: System Preference > Keyboard > Shortcuts Tab
-      * Left Sidebar: Select App Shortcuts
-      * Click the [+] button to add a shortcut
-      * Application: Bluestacks
-      * Menu Title: `Take screenshot` (any typo here will make it not work)
-      * Keyboard Shortcut: Anything you want it to be
-3. Back to Bluestacks: Install E7 from the Play Store and launch the game
-   * Set Epic 7 to **English** and enable **High Quality Support** in settings. [Example](https://i.imgur.com/iEbfVN3.png)
-4. Make sure to enter Full Screen Mode (Cmd+Shift+F) before starting your gear capture
-
-##### Screenshotting gear
-
-1. Open the Gear Management screen in Epic 7 and sort by Max Enhance<br>
-2. Click each of the gears that you want to import, and screenshot it with your emulator's hotkey. Every screenshot should be **1600x900** and look **EXACTLY** like this: https://i.imgur.com/68A8Uf0.jpg
-
-![https://i.imgur.com/ny7uaa8.jpg](https://i.imgur.com/ny7uaa8.jpg)
-
-* Most emulators have a screenshot hotkey to make this easier: Ctrl + 0 for LDPlayer
-* I would recommend screenshotting 10-20 gears to start with, then testing the rest of the steps to make sure the screenshots work before doing them all. I usually only screenshot the +9 to +15 gears for the optimizer.
-3. Create an empty folder and collect all your screenshots into that folder.
-4. Go to the Importer tab, click on "Choose folder" under *Creating gear data from screenshots*, find your screenshots folder, and click Open Folder.
-5. The app will start reading the screenshots and your progress will be displayed. Once it is done, click Export, and save the *gear.txt* file.
-6. Under the *Importing gear data* section, click on Append data, and select your *gear.txt* file.
-7. Now you should see your imported gears under the Gears tab.
 
 _________________
 
@@ -426,12 +352,12 @@ _________________
 ### Updating your gear
 
 * After enhancing/reforging/modifying your gear, you'll need to update it in the optimizer
-* Run the auto importer again, or use the screenshot importer, to generate a new gear.txt
+* Run the auto importer again to generate a new gear.txt
 * Use the Merge button on the Importer tab to update your existing save with the new gear
 
 _________________
 
-### Tips to get good optimization results:
+### Tips to get good optimization results
 
 Here's some quick tips on getting the best results. This is assuming you've read the [Optimization panel](https://github.com/fribbels/Fribbels-Epic-7-Optimizer#optimizer-tab) descriptions.
 
@@ -444,50 +370,6 @@ Here's some quick tips on getting the best results. This is assuming you've read
 * If you want a certain piece of gear to stay on a hero, go to the Gear tab -> Edit Selected Item -> Equipped and equip it on them first. [Example](https://i.imgur.com/oNO9ivL.png) Then you can use the optimizer with "Keep current" checked to keep that piece on them.
 
 _________________
-
-## TODO List
-
-There's still a lot of room to improve and I plan on adding new stuff as feedback comes in. I only work on this in my spare time, so please be patient with new features.
-
-**Done for 1.8.0**
- - Top % now input-able
-
-**Working on:**
- - v1.8.0
-
- **Medium priority:**
- - Safer autosave folder loading
- - Unequipped units ingame with gear in optimizer dont get unequipped on hero merge
- - Save subprocess ids in settings and kill at startup
- - Cancel search -> stop search
-
- **Low priority:**
- - Read file sync everything
- - Customizable optimization column formulas
- - Clear out item previews on refresh
- - Optimizer broken set priority
- - Hero priority equipping
- - Different pinned builds
- - Bug: Comparison method violates its general contract
- - Move save/load to File menu
- - Optimize multiple heroes at once
- - Gear page, option to use more than one set/gear filter at time
- - Auto copy gear image
- - Recolor on filter
-
- **Probably not doing:**
- - See unit stats for whatever gear they have currently, not just for 6 pieces
- - Cancel ongoing request when start is clicked again
- - Update permutations on 4 piece set
- - Select/interact with multiple heroes at once
- - Verify all imported screenshots are image files
- - Date newly added gear
- - Enable cross platform for Linux
- - Have two windows open at once
- - Optimize results with a missing piece(s)
- - Reapply all filters on Filter button press
- - Check if any gear is an upgrade to a unit
- - Option to equip gear from heroes page
 
 ## Troubleshooting
 
@@ -521,7 +403,7 @@ There's still a lot of room to improve and I plan on adding new stuff as feedbac
   - Your antivirus might be blocking the app, try disabling it. I've seen issues with Avast specifically, and disabling Avast temporarily solves it.
   - Your file or folder contents might be compressed, uncheck this box on the folder: https://i.imgur.com/kSzTqek.png
   - Run the app as administrator
-  - Move the app and screenshots folder to a new file location
+  - Move the app folder to a new file location
   - Disable Windows security randomware protection: https://www.majorgeeks.com/content/page/how_to_enable_or_disable_windows_defender_exploit_guard_controlled_folder_access.html
 
 - If you get a error that contains "Current relative path is C:\Windows\system32..."
@@ -530,27 +412,23 @@ There's still a lot of room to improve and I plan on adding new stuff as feedbac
 - If you're having trouble using it on Mac - "The application "FribbelsE7Optimizer" can't be opened":
   - Right click the app and click Open from the menu
   - Try unzipping the file using Unarchiver from the app store instead of Archive Utility. [Example](https://i.imgur.com/y9uGQcH.png)
-- If you're having trouble with Bluestacks/unable to resize the screenshots to 1600x900:
-  - Windows: See possible Bluestacks workaround [here](https://github.com/fribbels/Fribbels-Epic-7-Optimizer/commit/94b8730e94e6323b278265ab46f6602ed7822c22#r45552268).
-  - Mac: Resize to 1600x900 through Bluestacks options, then restart Bluestacks, then click the green button to fullscreen Bluestacks. After its fullscreened, screenshots will come out as 1600x900.
 
 - If a hero is missing from the drop down list, contact me to add it.
 
 - If you see a bunch of optimization result rows with the same stats, you probably have duplicate gear. [Example](https://i.imgur.com/hUcyN1I.png)
   - Use the Duplicates filter on the Gear screen to find and fix your duplicate gear. Alternatively Overwrite/Merge your gear data to start over. Be careful when using the Append option, because that can result in duplicate gear being added. Most of the time you'll want to use Merge.
 
-- If you're having problems with importing screenshot files:
-  - Inspect your screenshots and make sure they are exactly **1600x900** resolution.
-  - Make sure your Epic 7 settings have **English** and **High Quality Support** enabled.
-  - Try moving your app and screenshot folder to a different location. (try the desktop)
-
 * Drop by the Discord server for help debugging other issues: https://discord.gg/rDmB4Un7qg
 
 ## Contributing to the project
 
-If you want to contribute, come by the discord server to have a chat about what you want to do. There's a huge list of todo items and I'm happy to have people add to the code.
+If you want to contribute, come by the discord server to have a chat about what you want to do. We also have an ongoing translation project to translate the optimizer into various languages.
 
-We also have an ongoing translation project to translate the optimizer into various languages.
+### Project status
+
+The E7 optimizer is currently in maintenance mode - I'll be keeping the project updated with new units but new feature development is on pause.
+
+### Setup steps
 
 To run the frontend code locally,
 
@@ -564,8 +442,9 @@ To run the frontend code locally,
 5. To build and package the production executables: ``yarn package``
 
 To run the backend code requires some more setup, contact me for more info.
+
 ## Contact me
 
 Come join the Fribbels E7 Optimizer Discord server for questions or comments or ideas/suggestions: https://discord.gg/rDmB4Un7qg. If you ran into any issues, please check the [troubleshooting](https://github.com/fribbels/Fribbels-Epic-7-Optimizer/#troubleshooting) section above first.
 
-If you want to show support for the optimizer, you can [buy me a coffee](https://www.buymeacoffee.com/fribbels) or come say hi on Discord!
+If you want support the optimizer, you can [buy me a coffee](https://www.buymeacoffee.com/fribbels) or come say hi on Discord!
